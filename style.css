@@ -1,41 +1,127 @@
+/* General page layout */
 body {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  font-family: serif;
-  line-height: 1.6;
-  background: #222;   /* dark gray */
-  color: #e0e0e0;     /* light gray text */
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: serif;
+    line-height: 1.6;
+    background: #111;
+    color: #e0e0e0;
 }
 
-header, footer {
-  text-align: center;
-  margin: 2rem 0;
+/* Header & footer styling */
+header,
+footer {
+    text-align: center;
+    margin: 2rem 0;
 }
 
-nav a {
-  margin: 0 0.5rem;
-  text-decoration: none;
-  color: #8ab4f8;     /* light blue links */
+/* Headings */
+h1,
+h2,
+h3 {
+    font-family: sans-serif;
+    color: #ffffff;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-h1, h2, h3 {
-  font-family: sans-serif;
-  color: #ffffff;     /* bright white for headings */
-}
-
+/* Inline code style */
 code {
-  background: #333;
-  color: #f5f5f5;
-  padding: 0.1rem 0.3rem;
-  border-radius: 3px;
-  font-size: 90%;
+    background: #333;
+    color: #f5f5f5;
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    font-size: 90%;
 }
 
+/* Footer links */
 footer a {
-  color: #8ab4f8;
+    color: #8ab4f8;
+}
+
+/* Center all paragraphs */
+.centered {
+    text-align: center;
+}
+
+/* Center description lists */
+dl {
+    text-align: center;
+}
+
+/* Style for definition terms */
+dt {
+    font-size: large;
+}
+
+/* Style for definition descriptions */
+dd {
+    color: #aaa;
+    font-size: small;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+}
+
+/* --- Two-column menu layout --- */
+.menu {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    /* left fixed width, right flexible */
+    border: 1px solid #255945;
+    background: #333;
+    margin: 2rem 0;
+}
+
+.menu-item {
+    display: contents;
+    /* let children align directly in grid */
+}
+
+/* Left column links */
+.menu-item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: #111;
+    color: #255945;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+    border-right: 1px solid #444;
+    transition: background 0.3s;
+}
+
+.menu-item a:hover {
+    background: #255945;
+    color: #222;
+}
+
+/* Right column description */
+.menu-item span {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #111;
+    color: #e0e0e0;
+    border-bottom: 1px solid #444;
+}
+
+/* Site title (home button) */
+.site-title {
+    color: #ffffff;
+    /* white text (or any color you want) */
+    text-decoration: none;
+    /* remove underline */
+    font-size: 2.5rem;
+    /* make it bigger */
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.site-title:hover {
+    color: #255945;
+    /* change color when hovering (optional) */
+    text-decoration: none;
+    /* keep it clean */
 }
