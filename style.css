@@ -127,3 +127,19 @@ dd {
     text-decoration: none;
     /* keep it clean */
 }
+
+.art-piece img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+
+.album-cover img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
